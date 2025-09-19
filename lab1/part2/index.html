@@ -1,55 +1,96 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>Birdwatching</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700"
-      rel="stylesheet" />
-    <link
-      href="./style.css"
-      rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <title>Birdwatching</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
 
-    <!--
-      Name: Mohamed Tani
-      File: index.html
-      Date: 17 September 2025
-      Description: Marking up a bird watching page.
-    -->
+  <!--
+    Name: Mohamed Tani
+    File: index.html
+    Date: 17 September 2025
+    Description: Marking up a bird watching page.
+  -->
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="images/dove.png" alt="Dove icon" />
+      Birdwatching
+    </h1>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Get started</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="#">Gear</a></li>
+        <li><a href="#">Forum</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      </head>
-  <body>
-<h1>Birdwatching</h1>
+  <main>
+    <article>
+      <h2>Welcome</h2>
+      <p>
+        Welcome to our fake birdwatching site. If this were a real site, it
+        would be the ideal place to come to learn more about birdwatching,
+        whether you are a beginner looking to learn how to get into birding, or
+        an expert wanting to share ideas, tips, and photos with other
+        like-minded people.
+      </p>
+      <p>
+        So don't waste time! Get what you need, then turn off that computer and
+        get out into the great outdoors!
+      </p>
 
-    Home Get started Photos Gear Forum
+      <section aria-labelledby="favorites">
+        <h2 id="favorites">Favorite photos</h2>
 
-    <h2>Welcome</h2>
+        <article>
+          <figure>
+            <img src="images/favorite-1.jpg" alt="Tūī bird on a branch with red blossoms" />
+            <figcaption>A tūī bird feeding on red blossoms.</figcaption>
+          </figure>
+        </article>
 
+        <article>
+          <figure>
+            <img src="images/favorite-2.jpg" alt="Close-up of a peacock with bright blue feathers" />
+            <figcaption>A proud peacock showing vibrant plumage.</figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <figure>
+            <img src="images/favorite-3.jpg" alt="White ibis with long curved beak" />
+            <figcaption>A white ibis searching for food among leaves.</figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <figure>
+            <img src="images/favorite-4.jpg" alt="Pelican perched with large bill" />
+            <figcaption>A pelican resting on a ledge.</figcaption>
+          </figure>
+        </article>
+      </section>
+    </article>
+
+    <aside>
+      <h2>About this site</h2>
+      <p>
+        This fake website example is CC0 — any part of this code may be reused
+        in any way you wish. Original example written by Chris Mills, 2016.
+      </p>
+    </aside>
+  </main>
+
+  <footer>
     <p>
-      Welcome to our fake birdwatching site. If this were a real site, it
-      would be the ideal place to come to learn more about birdwatching,
-      whether you are a beginner looking to learn how to get into birding, or
-      an expert wanting to share ideas, tips, and photos with other
-      like-minded people.
+      <a href="http://game-icons.net/lorc/originals/dove.html">Dove icon</a> by Lorc.
     </p>
-
-    <p>
-      So don't waste time! Get what you need, then turn off that computer and
-      get out into the great outdoors!
-    </p>
-
-    <h2>Favorite photos</h2>
-
-    <!-- Link images here. -->
-
-    <p>
-      This fake website example is CC0 — any part of this code may be reused
-      in any way you wish. Original example written by Chris Mills, 2016.
-    </p>
-
-    <p>
-      <a href="http://game-icons.net/lorc/originals/dove.html">Dove icon</a>
-      by Lorc.
-    </p>
-  </body>
+  </footer>
+</body>
 </html>
