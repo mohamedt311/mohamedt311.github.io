@@ -1,22 +1,16 @@
 /* || General setup */
-
-body {
-  margin: 0;
-}
-
 html {
   font-size: 10px;
   background-color: darkgrey;
 }
 
 body {
+  margin: 0 auto;
   width: 70%;
   min-width: 800px;
-  margin: 0 auto;
 }
 
-/* || typography */
-
+/* || Typography */
 h1,
 h2 {
   font-family: "Cinzel Decorative", cursive;
@@ -24,46 +18,18 @@ h2 {
 }
 
 p,
-li {
+li,
+figcaption {
   font-family: "Roboto Condensed", sans-serif;
   color: #2a2a2a;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 h1 {
   font-size: 4rem;
   text-align: center;
   text-shadow: 2px 2px 10px black;
-}
-
-h2 {
-  font-size: 3rem;
-  text-align: center;
-}
-
-p,
-li {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-
-/* || header layout */
-
-header {
-  margin-bottom: 10px;
-}
-
-main,
-header,
-nav,
-article,
-aside,
-footer,
-section {
-  background-color: #00ff0080;
-  padding: 1%;
-}
-
-h1 {
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -71,19 +37,36 @@ h1 {
   gap: 20px;
 }
 
-header img {
-  height: 60px;
+h2 {
+  font-size: 3rem;
+  text-align: center;
 }
 
+/* || Layout blocks */
+header,
+nav,
+main,
+article,
+section,
+aside,
+footer {
+  background-color: #00ff0080;
+  padding: 1%;
+  margin-bottom: 10px;
+}
+
+/* || Navigation */
 nav ul {
   padding: 0;
+  margin: 0;
   list-style-type: none;
   display: flex;
+  justify-content: space-around;
 }
 
 nav li {
-  text-align: center;
   flex: 1;
+  text-align: center;
 }
 
 nav a {
@@ -98,8 +81,7 @@ nav a:focus {
   color: red;
 }
 
-/* || main layout */
-
+/* || Main layout */
 main {
   display: flex;
   gap: 10px;
@@ -113,16 +95,25 @@ aside {
   flex: 1;
 }
 
-aside a {
-  display: block;
-  float: left;
-  width: 50%;
+/* || Photos */
+figure {
+  margin: 0 0 20px 0;
 }
 
-aside img {
+figure img {
   max-width: 100%;
+  height: auto;
+  display: block;
 }
 
+figcaption {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* || Footer */
 footer {
-  margin-top: 10px;
+  text-align: center;
+  font-size: 1.4rem;
 }
