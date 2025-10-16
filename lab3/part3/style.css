@@ -1,3 +1,10 @@
+/* INFT1206 - Part 3 Layout Task
+   Author: Mohamed Tani
+   File: style.css
+   Description: Homepage layout with grid, navigation bar, and images
+*/
+
+/* Reset and box sizing */
 * {
   box-sizing: border-box;
 }
@@ -9,115 +16,80 @@ body {
   font: 1.2em / 1.6 sans-serif;
 }
 
+/* Generic image styling */
 img {
   max-width: 100%;
   display: block;
   border: 1px solid black;
 }
 
+/* Center the main logo text */
 .logo {
   font-size: 200%;
   padding: 50px 20px;
   margin: 0 auto;
   max-width: 980px;
+  text-align: center; /* NEW */
 }
 
+/* Main grid layout: article + aside */
 .grid {
   margin: 0 auto;
   max-width: 980px;
+  display: grid; /* NEW */
+  grid-template-columns: 2fr 1fr; /* article wider than aside */
+  gap: 40px; /* space between columns */
+  padding: 20px 0; /* top and bottom padding */
 }
 
+/* Horizontal nav bar */
 nav {
   background-color: black;
-  padding: 0.5em;
+  padding: 0.5em 0;
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex; /* horizontal */
+  justify-content: center; /* center items */
+}
+
+nav li {
+  margin: 0 10px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   padding: 0.5em 1em;
-}
-
-.photos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.feature {
-  width: 200px;
-}
-/* Center the big title text */
-.logo {
-  font-size: 200%;
-  padding: 50px 20px;
-  margin: 0 auto;
-  max-width: 980px;
-  text-align: center;            /* NEW */
-}
-
-/* Make main content two columns (article + sidebar) */
-.grid {
-  margin: 0 auto;
-  max-width: 980px;
-  display: grid;                 /* NEW */
-  grid-template-columns: 2fr 1fr;/* NEW: article wider than aside */
-  gap: 40px;                     /* NEW */
-  padding: 20px 0;               /* NEW */
-}
-
-/* Horizontal nav bar */
-nav {
-  background-color: black;
-  padding: 0.5em 0;              /* tweak */
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;                 /* NEW: horizontal */
-  justify-content: space-around; /* NEW: spread evenly */
-  max-width: 980px;              /* NEW: align with content width */
-  margin-inline: auto;           /* NEW: center the bar contents */
-}
-
-nav li {                         /* optional: remove default spacing */
-  margin: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5em 1.2em;
-  border: 1px solid #fff;        /* matches reference “tab” look */
-}
-
-/* Make the lead image sit left with text wrapping */
-.feature {
-  width: 200px;
-  float: left;                   /* NEW */
-  margin: 0 20px 10px 0;         /* NEW */
-}
-
-/* Neat 2-column photo grid in sidebar */
-.photos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;                 /* NEW */
-  grid-template-columns: repeat(2, 1fr); /* NEW */
-  gap: 10px;                     /* NEW */
-}
-
-.photos img {
   display: block;
-  width: 100%;
-  height: auto;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+/* Sidebar photo list */
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Feature image (main post image) */
+.feature {
+  width: 200px;
+  float: left; /* allow text to wrap around */
+  margin: 0 20px 20px 0;
+}
+
+/* Headings */
+h1, h2 {
+  color: #111;
+  margin-top: 0;
 }
