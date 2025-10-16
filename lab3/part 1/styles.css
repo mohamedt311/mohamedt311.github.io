@@ -1,0 +1,52 @@
+/*
+Name: Mohamed Tani
+File: styles.css
+Date: 15 October 2025
+Styling for the biography page (MDN “Styling a biography page” exercise).
+INFT1206 – Web Development Fundamentals
+*/
+
+html {
+  background-color: white;
+}
+
+body {
+  font: 1.2em / 1.5 system-ui;
+  padding: 20px;
+  width: 500px;
+  background-color: #efefef;
+  margin: 0 auto;
+}
+
+h1 {
+  color: darkslategray;
+  border-bottom: 10px dotted purple;
+  font-size: 2rem;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.job-title {
+  color: darkslategray;
+  font-weight: bold;
+}
+
+ul {
+  background-color: white;
+  border: 5px solid purple;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+a {
+  color: green;
+}
+
+a:hover,
+a:focus {
+  color: darkgreen;
+  text-decoration: none;
+}
