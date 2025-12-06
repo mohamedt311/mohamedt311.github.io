@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!--
+    Name: Mohamed Tani
+    File: index.html
+    Date: 29 November 2025
+    Accessibility troubleshooting challenge – fixed accessible version.
+    -->
+
+    <title>Accessibility assessment</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- the below three lines are a fix to get HTML5 semantic elements
+         working in old versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Welcome to our wildlife website</h1>
+    </header>
+
+    <!-- main navigation + search -->
+    <nav class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+
+      <form class="search" role="search" action="#" method="get">
+        <label for="search" class="visually-hidden">Search the wildlife site</label>
+        <input id="search" type="search" name="q" placeholder="Search query">
+        <input type="submit" value="Go!">
+      </form>
+    </nav>
+
+    <main>
+      <!-- main article -->
+      <article>
+        <h2>The trouble with Bears</h2>
+        <p>By Evan Wild</p>
+
+        <p>
+          Tall, lumbering, angry, dangerous. The real-life bears of this world are proud,
+          independent creatures, self-serving and always on the hunt for food. Nothing like
+          the friendly bears you see on TV or in children’s books.
+        </p>
+
+        <p>
+          But are bears really so terrible, and why does the world’s media portray them with
+          such a skewed vision? In this article we try to answer those questions and give you
+          some real insight into the life of the bear.
+        </p>
+
+        <h3>Types of bear</h3>
+
+        <p>
+          Bears come in two main varieties — large and medium. You don’t get small bears. If you
+          have seen a small bear, then it was in fact probably a baby bear (cub) from another
+          species.
+        </p>
+
+        <p>
+          Bears can also be classified in terms of their habitat — both large and medium bears are
+          just as at home in urban areas as they are in the wild. Wild bears live in the woods,
+          generally in caves, tree hollows, or rough bivouacs. Urban bears live in flats, bedsits,
+          student halls, and garden sheds.
+        </p>
+
+        <figure>
+          <img src="media/wild-bear.jpg" alt="A brown bear standing on a rock in a forest">
+          <figcaption>Brown bears can be found in forests and mountains across the Northern Hemisphere.</figcaption>
+        </figure>
+
+        <p>
+          Bears are also characterized by their eating habits — wild bears will catch fish and
+          other river/lakeside wildlife, and also eat fruits, nuts, and honey that they find in
+          the forest. Urban bears eat a mixture of baked beans, takeaway food, and ready meals.
+        </p>
+
+        <figure>
+          <img src="media/urban-bear.jpg" alt="A bear walking across a street in a city at night">
+          <figcaption>Urban bears are often spotted raiding bins and fast-food leftovers.</figcaption>
+        </figure>
+
+        <h3>Habitats and eating habits</h3>
+
+        <p>
+          Wild bears eat a variety of meat, fish, fruit, nuts, and other formal foodstuffs, and
+          tend to live in relative isolation, in caves, tents, or cottages.
+        </p>
+
+        <p>
+          Urban bears on the other hand have largely abandoned catching their own food, and
+          mainly live on baked beans, microwave meals, takeaways, and Starbucks. They prefer
+          to live in flats and bedsits, although some live in large houses with gardens.
+        </p>
+
+        <table>
+          <caption>Bear types, coat, size, habitat, lifespan, and diet</caption>
+          <thead>
+            <tr>
+              <th scope="col">Bear type</th>
+              <th scope="col">Coat</th>
+              <th scope="col">Adult size</th>
+              <th scope="col">Habitat</th>
+              <th scope="col">Lifespan</th>
+              <th scope="col">Diet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Wild</td>
+              <td>Brown or black</td>
+              <td>1.4 to 2.8 meters</td>
+              <td>Woods and forests</td>
+              <td>25 to 28 years</td>
+              <td>Fish, meat, plants</td>
+            </tr>
+            <tr>
+              <td>Urban</td>
+              <td>North Face</td>
+              <td>1.8 to 2.2 meters</td>
+              <td>Condos and coffee shops</td>
+              <td>20 to 32 years</td>
+              <td>Starbucks, sushi</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Bear sounds</h3>
+        <p>Listen to what a happy brown bear sounds like:</p>
+
+        <audio controls>
+          <source src="media/bear.mp3" type="audio/mpeg">
+          <source src="media/bear.ogg" type="audio/ogg">
+          Your browser does not support HTML audio.
+          <a href="media/bear.mp3">Download the bear audio file</a>.
+        </audio>
+
+        <details>
+          <summary>Audio transcript (for accessibility)</summary>
+          <p>
+            Low rumbling bear growls, followed by softer snuffling noises. The bear growls twice
+            more, then the sound fades as it walks away.
+          </p>
+        </details>
+
+        <!-- comments section -->
+        <section class="comments">
+          <button class="show-hide" type="button">Show comments</button>
+
+          <div class="comment-wrapper">
+            <ul class="comment-container">
+              <li>
+                <p>Sam</p>
+                <p>I love bears! They are adorable but also very powerful.</p>
+              </li>
+              <li>
+                <p>Jo</p>
+                <p>Interesting article — I didn’t know there were urban bears!</p>
+              </li>
+            </ul>
+
+            <form class="comment-form">
+              <div class="flex-pair">
+                <label for="name">Name:</label>
+                <input id="name" type="text">
+              </div>
+              <div class="flex-pair">
+                <label for="comment">Comment:</label>
+                <input id="comment" type="text">
+              </div>
+              <input type="submit" value="Submit comment">
+            </form>
+          </div>
+        </section>
+      </article>
+
+      <!-- related links -->
+      <aside class="secondary" aria-label="Related articles">
+        <h2>Related</h2>
+        <ul>
+          <li><a href="#">The trouble with Bees</a></li>
+          <li><a href="#">The trouble with Otters</a></li>
+          <li><a href="#">The trouble with Penguins</a></li>
+          <li><a href="#">The trouble with Octopi</a></li>
+          <li><a href="#">The trouble with Lemurs</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
